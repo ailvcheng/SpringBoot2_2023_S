@@ -1,0 +1,8 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    #    SpringBoot默认lettuce,jedis在多线程模式下会存在安全问题(与服务器直连),解决可以配置连接池使得每个连接池专用,但整体性能会有影响
+    client-type: jedis
+
+

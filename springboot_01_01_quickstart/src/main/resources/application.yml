@@ -1,0 +1,70 @@
+server:
+  port: 80
+  servlet:
+    #  访问上下文路径，应用路径
+    context-path: "/"
+spring:
+  #修改banner   SpringApplicationBannerPrinter
+  banner:
+    image:
+      location: 0
+  main:
+    banner-mode: off
+
+
+#      日志级别
+#logging:
+#  level:
+#    root: debug
+
+
+
+
+
+
+# 测试读取yaml数据
+country: China
+province: liaoning
+city: ShenYang
+area: haunggu
+#date
+birthday: 2000-01-01 #必须 YYYY-MM-DD
+#dateTime
+time: 2020-10-10T21:01+8:00
+user:
+  #  对象数组  user[{},{}]
+  - name1: lz
+    age: 22
+    #float 支持科学计数法
+    val: 2e+4  #20000.0
+    valid: True  # TRUE,True,true均可
+user2:
+  - name: z
+    age: 21
+
+a:
+  b:
+    c:
+      d: 1111
+
+
+likes:
+  #数组[a,b]
+  - games
+  - music
+  - coding
+
+
+baseDir: c:\widows
+
+#使用{}引用yaml其他属性,也是使用SPEL
+tempDir: ${baseDir}\tmp #\t默认就是\t（非转义字符）,若不要变成转义字符，使用双引号包裹，必须双引号
+tempDir2: "${baseDir}\tmp \t 1"
+
+datasource:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql:///mydb
+  username: root
+  password: 1234
+
+
