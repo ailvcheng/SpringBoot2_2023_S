@@ -1,0 +1,20 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:20010
+server:
+  port: 20011
+management:
+  endpoint:
+    health:
+      show-details: always
+#    info:
+  #      enabled: true
+  #      上面开放功能，下面才能访问
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+in: zjj
+va: @project.version@
